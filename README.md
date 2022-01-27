@@ -18,7 +18,7 @@
     ```
 - If you are not running Windows follow this guide for some extra steps: https://docs.bepinex.dev/articles/user_guide/installation/index.html
 - Download a mod from the [Releases](https://github.com/GrimStride/SomeUCHMods/releases) and extract it
-- Once extracted the mod should consist of a `.dll` inside a folder, move that folder to `BepInEx/plugins`
+- Once extracted, the mod should consist of a `.dll` inside a folder, move that folder to `BepInEx/plugins`
 
 ## Building
 - Download and install [.NET Framework 4.8  Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-developer-pack-offline-installer)
@@ -29,6 +29,7 @@
 - **Optional:** Create an environment variable called `UCHPATH` that contains the path to the Ultimate Chicken Horse game folder.
 - Open a `Developer Command Prompt` if you installed Visual Studio or the Build Tools, open a `Mono Command Prompt` if you installed Mono
 - `cd` to the folder of the mod you want to build
+- If you haven't already, run the command `dotnet restore`
 - Run the following command:
   ```
   dotnet msbuild <Mod Name>.csproj -p:UCHPATH=<Path to Ultimate Chicken Horse game folder>;Configuration=Release`
