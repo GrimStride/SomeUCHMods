@@ -29,12 +29,18 @@
 - **Optional:** Create an environment variable called `UCHPATH` that contains the path to the Ultimate Chicken Horse game folder.
 - Open a `Developer Command Prompt` if you installed Visual Studio or the Build Tools, open a `Mono Command Prompt` if you installed Mono
 - `cd` to the folder of the mod you want to build
-- Run `dotnet msbuild <Mod Name>.csproj -p:UCHPATH=<Path to Ultimate Chicken Horse game folder>;Configuration=Release`
+- Run the following command:
+  ```
+  dotnet msbuild <Mod Name>.csproj -p:UCHPATH=<Path to Ultimate Chicken Horse game folder>;Configuration=Release`
+  ```
   * If you installed the game in the default Steam location and you are going to build the RoundCounter mod, the command should look like this:
     ```
     dotnet msbuild RoundCounter.csproj -p:UCHPATH="C:\Program Files (x86)\Steam\steamapps\common\Ultimate Chicken Horse";Configuration=Release
     ```
     * Always put double quotes `"` if your path contains spaces
-    * If you set the environment variable of the optional step above, you can shorten the last part of the command to<br/>`-p:Configuration=Release`
+    * If you set the environment variable of the optional step above, you can shorten the last part of the command to:
+      ```
+      -p:Configuration=Release
+      ```
     * Change `Release` to `Debug` if you want to build the debug version of the mod
 - The compiled `.dll` will be inside the `build` folder
