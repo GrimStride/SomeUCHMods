@@ -42,7 +42,7 @@ namespace ColorPicker
             IntPtr custColorPtr = Marshal.AllocCoTaskMem(64);
             Marshal.Copy(custColors, 0, custColorPtr, 16);
             cc.lStructSize = Marshal.SizeOf<CHOOSECOLOR>();
-            cc.hwndOwner = new IntPtr(0);;
+            cc.hwndOwner = new IntPtr(0);
             cc.rgbResult = rgbCurrent;
             cc.Flags = (CC_RGBINIT | CC_FULLOPEN);
             cc.lpCustColors = custColorPtr;
